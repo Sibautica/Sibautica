@@ -6,7 +6,7 @@ on:
       - "**"
 
 jobs:
-  build:
+  build_and_release:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,35 +21,19 @@ jobs:
       - name: Run download.js
         run: node ./other/download.js
 
-      - name: Archive generated files
+      - name: Collect generated files
         run: |
           mkdir artifacts
-          cp -r ./other/output/* ./artifacts/ 2>/dev/null || true
+          # tu dodaj wszystkie ścieżki gdzie download.js generuje pliki
           cp -r ./output/* ./artifacts/ 2>/dev/null || true
+          cp -r ./other/output/* ./artifacts/ 2>/dev/null || true
           cp -r ./dist/* ./artifacts/ 2>/dev/null || true
 
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: sibautica-build
-          path: artifacts/
-
-  release:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Download artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: sibautica-build
-          path: release-files
-
-      - name: Create Release
+      - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.sha }}
           name: ${{ github.event.head_commit.message }}
-          files: release-files/**
+          files: artifacts/**
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
