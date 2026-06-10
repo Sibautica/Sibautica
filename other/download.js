@@ -3,11 +3,13 @@ import path from "path";
 import { exec } from "child_process";
 import https from "https";
 import http from "http";
-
-const BASE_DIR = path.resolve("..");
+import url from "url";
+const __filename = url.fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const BASE_DIR = path.join(__dirname, ".."); // Zakładam, że BASE_DIR to katalog nadrzędny względem "other"
 
 // Wczytaj JSON
-const raw = fs.readFileSync("./download.json", "utf8");
+const raw = fs.readFileSync(path.join(__dirname, "download.json"), "utf8");
 const items = JSON.parse(raw);
 
 // Pobieranie pliku
