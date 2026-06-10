@@ -40,7 +40,7 @@ jobs:
 
           echo "Tworzę ZIP..."
           cd "$RELEASE_DIR"
-          zip -r /tmp/release.zip .
+          zip -r /tmp/release-windows.zip .
 
       - name: Create tag name
         id: tag
@@ -51,6 +51,6 @@ jobs:
         with:
           tag_name: ${{ steps.tag.outputs.tag }}
           name: ${{ github.event.head_commit.message }}
-          files: /tmp/release.zip
+          files: /tmp/release-windows.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
