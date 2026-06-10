@@ -1,0 +1,22 @@
+name: Run download.js on push
+
+on:
+  push:
+    branches:
+      - "**"
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run download.js
+        run: node ./other/download.js
