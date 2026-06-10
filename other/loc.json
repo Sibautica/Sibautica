@@ -1,0 +1,119 @@
+{
+  "languages": [
+    { "code": "cs", "name": "cs-CZ" },
+    { "code": "de", "name": "de-DE" },
+    { "code": "en", "name": "en-US" },
+    { "code": "es", "name": "es-ES" },
+    { "code": "fr", "name": "fr-FR" },
+    { "code": "it", "name": "it-IT" },
+    { "code": "pl", "name": "pl-PL" },
+    { "code": "pt", "name": "pt-BR" },
+    { "code": "ru", "name": "ru-RU" },
+    { "code": "sk", "name": "sk-SK" },
+    { "code": "uk", "name": "uk-UA" }
+  ],
+  "locales": [
+    {
+  "native": true,
+  "name": "1",
+  "locale": [
+    "Vybraný jazyk",
+    "Ausgewählte Sprache",
+    "Selected language",
+    "Idioma seleccionado",
+    "Langue sélectionnée",
+    "Lingua selezionata",
+    "Wybrany język",
+    "Idioma selecionado",
+    "Выбранный язык",
+    "Vybraný jazyk",
+    "Обрана мова"
+  ]
+},
+    {
+      "native": true,
+      "name": "2",
+      "locale": [
+        "Seznam podporovaných jazyků",
+        "Liste der unterstützten Sprachen",
+        "Supported languages",
+        "Lista de idiomas compatibles",
+        "Liste des langues prises en charge",
+        "Elenco delle lingue supportate",
+        "Lista obsługiwanych języków",
+        "Lista de idiomas suportados",
+        "Список поддерживаемых языков",
+        "Zoznam podporovaných jazykov",
+        "Список підтримуваних мов"
+      ]
+    },
+    {
+      "native": true,
+      "name": "3",
+      "locale": [
+        "Jazyk byl vybrán",
+        "Sprache wurde ausgewählt",
+        "Language selected",
+        "Idioma seleccionado",
+        "Langue sélectionnée",
+        "Lingua selezionata",
+        "Wybrano język",
+        "Idioma selecionado",
+        "Язык выбран",
+        "Jazyk bol vybraný",
+        "Мову вибрано"
+      ]
+    },
+    {
+      "native": true,
+      "name": "4",
+      "locale": [
+        "Vítejte v Sibautica! Pro změnu jazyka použijte příkaz lang [jazyk]. Pro zobrazení všech dostupných jazyků použijte příkaz lang bez argumentů.",
+        "Willkommen bei Sibautica! Um die Sprache zu ändern, verwenden Sie den Befehl lang [Sprache]. Um alle verfügbaren Sprachen anzuzeigen, verwenden Sie den Befehl lang ohne Argumente.",
+        "Welcome to Sibautica! To change the language, use the command lang [language]. To display all available languages, use the command lang without arguments.",
+        "¡Bienvenido a Sibautica! Para cambiar el idioma, usa el comando lang [idioma]. Para mostrar todos los idiomas disponibles, usa el comando lang sin argumentos.",
+        "Bienvenue dans Sibautica ! Pour changer la langue, utilisez la commande lang [langue]. Pour afficher toutes les langues disponibles, utilisez la commande lang sans argument.",
+        "Benvenuto in Sibautica! Per cambiare la lingua, usa il comando lang [lingua]. Per visualizzare tutte le lingue disponibili, usa il comando lang senza argomenti.",
+        "Witaj w Sibautica! Aby zmienić język, użyj komendy lang [język]. Aby wyświetlić wszystkie dostępne języki, użyj komendy lang bez argumentów.",
+        "Bem-vindo ao Sibautica! Para alterar o idioma, use o comando lang [idioma]. Para exibir todos os idiomas disponíveis, use o comando lang sem argumentos.",
+        "Добро пожаловать в Sibautica! Чтобы изменить язык, используйте команду lang [язык]. Чтобы показать все доступные языки, используйте команду lang без аргументов.",
+        "Vitajte v Sibautica! Na zmenu jazyka použite príkaz lang [jazyk]. Na zobrazenie všetkých dostupných jazykov použite príkaz lang bez argumentov.",
+        "Ласкаво просимо до Sibautica! Щоб змінити мову, використовуйте команду lang [мова]. Щоб переглянути всі доступні мови, використовуйте команду lang без аргументів."
+      ]
+    },
+    {
+      "native": true,
+      "name": "5",
+      "locale": [
+        "Na shledanou!",
+        "Auf Wiedersehen!",
+        "Goodbye!",
+        "¡Adiós!",
+        "Au revoir!",
+        "Arrivederci!",
+        "Do widzenia!",
+        "Tchau!",
+        "До свидания!",
+        "Dovidenia!",
+        "До побачення!"
+      ]
+    },
+    {
+      "native": true,
+      "name": "6",
+      "locale": [
+        "Neplatný jazyk",
+        "Ungültige Sprache",
+        "Invalid language",
+        "Idioma no válido",
+        "Langue invalide",
+        "Lingua non valida",
+        "Nieprawidłowy język",
+        "Idioma inválido",
+        "Недопустимый язык",
+        "Neplatný jazyk",
+        "Неприпустима мова"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+cs cs-CZ
+de de-DE
+en en-US
+es es-ES
+fr fr-FR
+it it-IT
+pl pl-PL
+pt pt-BR
+ru ru-RU
+sk sk-SK
+uk uk-UA

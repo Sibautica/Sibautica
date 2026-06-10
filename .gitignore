@@ -1,0 +1,29 @@
+# --- CONFIG ---
+config/opened.txt
+
+# --- SCRIPTS ---
+scripts/wezterm.lua
+
+# --- FOLDERS TO IGNORE ---
+x64/
+nodejs/
+terminal/
+
+# --- LOCALE FILES ---
+other/loc*.txt
+
+# --- SYSTEM ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- LOGS / TEMP ---
+logs/
+temp/
+*.log
+*.tmp
+
+# --- NODE ---
+node_modules/
+npm-debug.log
+yarn-error.log
