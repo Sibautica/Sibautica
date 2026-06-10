@@ -8,10 +8,14 @@ on:
 jobs:
   build_and_release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # pozwala tworzyć release
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # potrzebne do pobrania wszystkich plików
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -21,15 +25,22 @@ jobs:
       - name: Run download.js
         run: node ./other/download.js
 
-      - name: Collect generated files
+      - name: Prepare artifacts folder
         run: |
           mkdir artifacts
-          # tu dodaj wszystkie ścieżki gdzie download.js generuje pliki
+
+          echo "Kopiuję pliki z repo..."
+          cp -r ./* ./artifacts/ 2>/dev/null || true
+
+          echo "Kopiuję wygenerowane pliki..."
           cp -r ./output/* ./artifacts/ 2>/dev/null || true
           cp -r ./other/output/* ./artifacts/ 2>/dev/null || true
           cp -r ./dist/* ./artifacts/ 2>/dev/null || true
 
-      - name: Create GitHub Release
+      - name: List artifacts
+        run: ls -R artifacts
+
+      - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.sha }}
