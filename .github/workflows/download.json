@@ -7,6 +7,6 @@
     {
         "url": "https://nodejs.org/dist/v24.16.0/node-v24.16.0-win-x64.zip",
         "to": "./nodejs/node.zip",
-        "postdownload": "unzip -o nodejs/node.zip -d nodejs && rm -f nodejs/node.zip"
+        "postdownload": "unzip -o nodejs/node.zip -d nodejs && rm -f nodejs/node.zip && npm i && npx tsc"
     }
 ]
