@@ -1,0 +1,4 @@
+class elo {
+
+}
+new elo()

@@ -1,0 +1,24 @@
+{
+  "name": "sibautica",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/MilexinTeam/Sibautica#readme",
+  "bugs": {
+    "url": "https://github.com/MilexinTeam/Sibautica/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MilexinTeam/Sibautica.git"
+  },
+  "license": "MPL-2.0",
+  "author": "MilexinTeam",
+  "type": "module",
+  "main": "./dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@types/node": "^26.0.0",
+    "typescript": "^6.0.3"
+  }
+}
