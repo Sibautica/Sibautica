@@ -29,9 +29,16 @@ jobs:
 
       - name: Prepare ZIP content
         run: |
-          New-Item -ItemType Directory -Force -Path release_root
-          Copy-Item -Recurse -Force * release_root
-          Compress-Archive -Path release_root\* -DestinationPath release.zip
+          # Utwórz katalog
+          New-Item -ItemType Directory -Force -Path release_root | Out-Null
+
+          # Skopiuj wszystko oprócz release_root i .git
+          Get-ChildItem -Force | Where-Object {
+            $_.Name -ne "release_root" -and $_.Name -ne ".git"
+          } | Copy-Item -Recurse -Force -Destination release_root
+
+          # Spakuj
+          Compress-Archive -Path release_root\* -DestinationPath release.zip -Force
 
       - name: Create tag name
         id: tag
