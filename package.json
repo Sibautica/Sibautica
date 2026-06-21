@@ -14,11 +14,22 @@
   "author": "MilexinTeam",
   "type": "module",
   "main": "./dist/main.js",
+  "bin": "./dist/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:exe": "pkg ."
   },
   "dependencies": {
     "@types/node": "^26.0.0",
     "typescript": "^6.0.3"
+  },
+  "pkg": {
+    "scripts": [
+      "dist/*"
+    ],
+    "targets": [
+      "node20-win-x64"
+    ],
+    "outputPath": "release"
   }
 }
