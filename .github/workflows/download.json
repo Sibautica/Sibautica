@@ -2,6 +2,6 @@
     {
         "url": "https://github.com/wezterm/wezterm/releases/download/20240203-110809-5046fc22/WezTerm-windows-20240203-110809-5046fc22.zip",
         "to": "./dist/terminal/wezterm.zip",
-        "postdownload": "unzip -o dist/terminal/wezterm.zip -d dist/terminal && rm -f dist/terminal/wezterm.zip && cp -r dist/terminal/WezTerm-*/* terminal && rm -rf dist/terminal/WezTerm-* && npm i && npx tsc && npx pkg ."
+        "postdownload": "unzip -o dist/terminal/wezterm.zip -d dist/terminal && rm -f dist/terminal/wezterm.zip && cp -r dist/terminal/WezTerm-*/* dist/terminal && rm -rf dist/terminal/WezTerm-* && npm i && npx tsc && npx pkg ."
     }
 ]
