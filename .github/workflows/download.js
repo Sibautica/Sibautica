@@ -55,30 +55,7 @@ function run(cmd) {
 }
 
 (async () => {
-  //
-  // 0. Pobierz Node.js 26
-  //
-  const nodeZip = path.join(BASE_DIR, "node.zip");
-  const nodeUrl = "https://nodejs.org/dist/v24.17.0/node-v24.17.0-win-x64.zip";
 
-  console.log("Pobieram Node.js 26...");
-  await downloadFile(nodeUrl, nodeZip);
-
-  console.log("Rozpakowuję Node.js 26...");
-  await fs.createReadStream(nodeZip)
-    .pipe(unzipper.Extract({ path: path.join(BASE_DIR, "dist/node") }))
-    .promise();
-
-  fs.unlinkSync(nodeZip);
-
-  // znajdź folder node-v26*
-  const nodeDir = fs.readdirSync(path.join(BASE_DIR, "dist/node"))
-    .find(f => f.startsWith("node-"));
-
-  const nodeExePath = path.join(BASE_DIR, "dist/node", nodeDir, "node.exe");
-
-  // skopiuj node.exe do dist/
-  fs.copyFileSync(nodeExePath, path.join(BASE_DIR, "dist/node.exe"));
 
   //
   // 1. Pobieranie i instalacja WezTerm
@@ -133,27 +110,4 @@ function run(cmd) {
   console.log("Kompiluję TypeScript...");
   await run("npx tsc");
 
-  //
-  // 3. Bundlowanie → CJS
-  //
-  console.log("Bundluję esbuild → CJS...");
-  await run("npx esbuild dist/main.js --bundle --platform=node --format=cjs --outfile=dist/bundle.cjs");
-
-  //
-  // 4. Bytenode → JSC
-  //
-  console.log("Kompiluję bytenode → Sibautica.jsc...");
-  await run("npx bytenode --compile dist/bundle.cjs --output dist/Sibautica.jsc");
-
-  //
-  // 5. Dodaj launcher run.js
-  //
-  const launcher = `
-require("bytenode");
-require("./Sibautica.jsc");
-  `.trim();
-
-  fs.writeFileSync(path.join(BASE_DIR, "dist/run.js"), launcher);
-
-  console.log("Wszystko gotowe.");
 })();
