@@ -22,10 +22,6 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Download nodec
-        run: |
-          Invoke-WebRequest "https://github.com/pmq20/node-compiler/releases/download/v1.4.2/nodec-win-x64.exe" -OutFile "nodec.exe"
-
       - name: Install deps + run download.js
         run: |
           npm i
