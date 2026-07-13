@@ -1,8 +1,0 @@
-{
-  "selected_language": "Selected language",
-  "supported_languages": "Supported languages",
-  "language_selected": "Language selected",
-  "welcome": "Welcome to Sibautica! To change the language, use the command lang [language]. To display all available languages, use the command lang without arguments.",
-  "goodbye": "Goodbye!",
-  "invalid_language": "Invalid language"
-}

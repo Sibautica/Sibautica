@@ -1,8 +1,0 @@
-{
-  "selected_language": "Ausgewählte Sprache",
-  "supported_languages": "Liste der unterstützten Sprachen",
-  "language_selected": "Sprache wurde ausgewählt",
-  "welcome": "Willkommen bei Sibautica! Um die Sprache zu ändern, verwenden Sie den Befehl lang [Sprache]. Um alle verfügbaren Sprachen anzuzeigen, verwenden Sie den Befehl lang ohne Argumente.",
-  "goodbye": "Auf Wiedersehen!",
-  "invalid_language": "Ungültige Sprache"
-}
